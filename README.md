@@ -1,2 +1,2 @@
 # kim-gits-this
-This is my MS HCDE space!
+is this a page? or a repositiory?
