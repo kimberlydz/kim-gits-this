@@ -15,32 +15,60 @@
             <h1>CAD Model + Fabricated Output</h1>
             <a href="https://github.com/kimberlydz/kim-gits-this/blob/master/vssDF_Ass_1.ai">Native Vector File</a>
             <p>
-            <img src="IMG_2523.JPG" width=400></a>
+            <img src="IMG_1867.JPG" width=400><img src="IMG_9015.JPG" width=400></a>
             </p>
-            <p>I searched online for concepts based on a triangle shape.<br>
-              I found this pic of a beautiful form accredited to Gearge W. Hart<br>
-              and featured in a Quarky Science blog post.
-            </p>
-            <p>
-            <img src="IMG_2999.JPG" width=400></a>
+            <p>I chose to create simple shapes to focus on learning Rhino/Grasshopper.The above images reflect my<br>
+            final outcomes,a circle and hexagon with different thicknesses if materials (cardboard).However I started<br>
+            with a basic square beginning with the Grasshopper(GH)'square' component.
             </p>
             <p>
-            Referring to details about the individual piece provided in the blog post,I went to work<br>
-            creating a vector grid to get the 20 triangles I needed = totally wrong geometry...My bad.
+            <img src="SquareFAIL.png" width=400></a>
             </p>
             <p>
-            <img src="IMG_3418.JPG" width=400></a>
+            Using GH I was unable to shift the square to have a centerpoint in<br>
+            alignment with the centerpoint of the xy radius on the Rhino canvas.<br>
+            A solve may be creating a square using the polygon component because a<br>
+            polygon is defined by radius and will always start with a center point.<br>
+            I think.
             </p>
             <p>
-            I quickly abandoned the grid to focus on creating the one piece I needed, a 3" equilateral triangle.<br>
-            I added a 1" red rule to help me accurately place the required notches 1" from each corner. Using a<br>
-            digital kaliper I learned my cardboard was 3mm thick, but when I added a notch of that dim to my triangle<br>
-            it seemed much to wide relative to the area of the triangle—which indicated to me that if I proceeded with<br>
-            3mm cardboard I'd have trouble with construction. So I went dumpster diving for thinner card board and<br>
-            hopefully more elegant solution in the end.
+            <img src="CircleGH.png" width=400></a>
             </p>
+            <p>
+            I abandoned the square and created a circle using the polygon component.<br>
+            -Next I added a Radius parameter with a maximum of 65mm for width.<br>
+            -And as follows:<br>
+            -A Rectangle component<br>
+            -a number slider each for X and Y dimensions attached with the X and Y ports of the Rectangle.<br>
+            <br>
+            <br>
+            RELOCATING RECTANGLE ON THE SPHERE AND ABILITY TO RE-SIZE ELEMENTS
+            I was challenged to understand these next computational relationships which are required to create <br>
+            radiating notches around the sphere—AND have the ability to change the geometry(rectangles and sphere)<br>
+            simultaneously maintaining relativity of measurements or/and also— change dim's independently of one another.<br>
+            With my colleagues help I achieved this as follows:<br>
+            <br>
+            MOVING RECTANGLE:
+            -I created a Move parameter to adjust rectangle/notch to locate it at the top center of the circle.<br>
+            -added a X/Y Vector component to tell the rectangle which direction to move along<br>
+            -I added a Subtract parameter to which I attached the Circle geometry and the Y dimension of the Rectangle.<br>
+            <br>
+            CHANGING DIMENSIONS RELATIVELY
+            -added a Multiply parameter<br>
+            -and attached both a Number Slider and Number Parameter (which dictated the increment of the sldier)<br>
+             to the above Multiply parameter.
+             -I joined the Multiply parameter to the X/Y Vector parameter.<br>
+             <br>
+             At this point I attached the entire geometry to the Move parameter: attaching the Rectangle to the Geometry port<br>
+             and the Vector to the T (motion) port. Which I then connected to a Polar Array parameter.<br>
+             -A number slider was necessary to indictate the range of number of items in the polar array.<br>
+             <br>
+             The last step was creating the negative space of the notch by connecting the Polar Array rectangles and the<br>
+             Sphere to a Region Difference component.
 
 
+
+            </p>
             <p>
             <img src="red-panda.jpg" width=400></a>
             </p>
