@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>My assignment 7</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+        <div class="header">
+
+            <h1>Final Project Plan</h1>
+
+<a href="pyramid.3dm">Rhino File</a>
+<a href="https://a360.co/2I1Tgxv">Fusion 360 Filee</a>
+            <p>
+
+            <img src="6_1inspire.png" width=600></a>
+            </p>
+            <p>
+              The goal of this assignment is to create a mold for a plaster casting. The steps include <br/>
+              first creating a mold from wax, to be used to create a mold from silicon, to be used for <br/>
+              creating the object of desire in plaster.
+              <br/>
+              <br/>I looked for inspiration on Thingaverse. Thinking about the movement of the milling <br/>
+              bit, I searched for ideas that didn't include an overhanging ledge. I chose a pyramid <br/>
+              because of it's top down unfolding nature.
+            </p>
+            <p>
+            <img src="6_2first-Rhinofile.png" width=600></a>
+            </p>
+            <p>
+            I downloaded the pyramid files from thingaverse and opened the native STL file in Rhino, <br/>
+            where I had created a 3d mesh container that matched the size of a block of wax I intended <br/>
+            to mill.
+            <br/>
+            <br/>
+             In Rhino, I placed the pyramid inside my mesh container,in contact with its base. <br/>
+             As a 'whole', I exported the file as a 3dm file, one step toward manifesting the file <br/>
+             in G-Code, a language that the milling machine can interpret to carve my wax mold.<br/>
+
+             <br/><br/>
+            </p>
+            <p>
+            <img src="6_3Fuse_FirstPyramid.png" width=600></a>
+            </p>
+            <p>
+            I opened my STL file in Fusion 360 where I was able to simulate a <br/>
+            milling tool path. Nadia who was the makerspace viewed my pyramid shape <br/>
+            and made the observaton that my pyramid had detailing the milling tool <br/>
+            and motion would not be able to render.
+
+            </p>
+            <p>
+            <img src="6_4_1Inspiration_vs2-Pyramid.png" width=600></a>
+            </p>
+            <p>
+            I sourced a new file and repeated the same process with the more simple  <br/>
+          3D pyramid structure pictured above.(by TK3DPrinting)
+            </p>
+            <p>
+            <img src="" width=600></a>
+            </p>
+
+            <p>
+            <img src="6_5AligninmentIssue.png" width=600></a>
+            </p>
+            In order to open my pyramid at the correct dimensions I went to "insert>mesh".  <br/>
+            In its initial state, the solids field in Fusion did not align with my model. <br/>
+
+            </p>
+            <p>
+            <img src="6_7SetUp-MeshSetting.png" width=600></a>
+            </p>
+            <p>
+            I didn't notate how I solved it in the moment and can't be certain now —but believe<br/>
+             it was a simple input "Mesh" in Fusion "Set Up" window not a Rhino file issue.  <br/>
+            (An engineering student working nearby believed the problem was the mesh nature  <br/>
+            of Rhino—and that a solid is theintended file type to be used in Fusion.)
+            </p>
+
+            <p>
+            <img src="6_18.png" width=600></a>
+            </p>
+            <p>
+              I established the correct milling bit this way: Manager > tool library > local> 1/8" flat.<br/>
+              I followed a file set up process this way: Manager > new set up > where I adjusted settings under<br/>
+              the "set up" and "stock" tabs.
+            </p>
+            <p>
+            <img src="6_8ToolPath.png" width=600></a>
+            </p>
+            <p>
+              I next did the "simulate the tool path" command— in my limited experience the path looked good!<br/>
+
+            Post processing interpreted my file as G-Code required for Computer Controlled Milling.<br/>
+
+            </p>
+            <p>
+            <img src="6_10.JPG" width=600></a>
+            </p>
+            <p>
+              I attached my wax to the Bantam mill base using hot glue, and hit start.<br/>
+              <br/>
+               I had these many challenges with milling, using the small Bantam mill.<br/>
+              • I had to further shave down my wax to allow for mill bit despite having cut it to fit.<br/>
+              • Bantam sent an error message that the bit did not have adequate retraction room.<br/>
+              • Back at Fusion I adjusted retraction distance with the goal of overriding error<br/>
+
+              • After starting to mill, at 3/8" of wax removed, I noticed the tool path was misbehaving.<br/>
+              • Back at Fusion to re-do simulation of tool path.<br/>
+              • Back in Bantam, the error message persisted<br/>
+              • Back to fusion where with advice, I made a more agressive adjustment to retraction distance.<br/>
+              • Back to Bantam, I hit the "start" button hoping to override the persisting error message. <br/>
+
+
+            </p>
+            <p>
+            <img src="image-AB05E7D8E5A8-1.gif" width=600></a>
+            </p>
+            <p>
+              Finally I was able to have progress milling. <br/>
+              <br/>
+              Note! I had to hit the emergency stop when almost to the end, the mill bit ARM (not the mill bit)<br/>
+              made contact with my wax and began acting as a drill itself !!!(see the round cut out in my final mold).<br/>
+              Hence the "retraction" warning : My wax block was slightly too deep/thick, despite fitting under the mill bit.
+
+            </p>
+            <p>
+            <img src="6_12.JPG" width=600></a>
+            </p>
+            <p>
+            I mixed up silicon at home and filled my mold. No issues.
+            </p>
+            <p>
+            <img src="6_13.JPG" width=600></a>
+            </p>
+            <p>
+            I had a delay in getting plaster and resorted to using a Light weight modeling plaster which worked— <br/>
+            however it appears the material consistency wasn't fluid enough to get into the sharp corners.
+            <br/>
+            <br/>
+            </p>
+
+            <p>
+            <img src="6_14.JPG" width=600></a>
+            </p>
+
+            <img src="6_15.JPG" width=600></a>
+            </p>
+
+            <img src="6_16.JPG" width=600></a>
+            </p>
+            <p>
+          Thanks for peer help from Peter, Cindy and Dawn for problem solving. <br>
+          <br>
+            </p>
+        </div>
+
+    </body>
+</html>
